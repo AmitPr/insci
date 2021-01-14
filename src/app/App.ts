@@ -55,7 +55,7 @@ class App {
         if (document.querySelector(".button-new-cell")) {
             const newButtonContainer: HTMLElement = document.querySelector(".button-new-cell") as HTMLElement;
             const newCellButton: Button = new Button(newButtonContainer, plusCircle, () => {
-                this.notebook.newCell(null, "python");
+                this.notebook.newCell("python");
             });
         }
 
@@ -102,7 +102,7 @@ class App {
 
         if (document.querySelector("#cell-type")) {
             const cellTypeSelect: HTMLSelectElement = document.querySelector("#cell-type") as HTMLSelectElement;
-            cellTypeSelect.onchange = (e: Event) => { App.inst.notebook.newCell(App.inst.notebook.activeCell, (e.currentTarget as HTMLSelectElement).value); }
+            cellTypeSelect.onchange = (e: Event) => { App.inst.notebook.newCell((e.currentTarget as HTMLSelectElement).value,App.inst.notebook.activeCell); }
         }
 
     }

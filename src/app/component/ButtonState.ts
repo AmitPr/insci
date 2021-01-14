@@ -16,7 +16,7 @@ class ButtonState {
             opt.value=type;
             App.instance().typeSelector.appendChild(opt);
         }
-        App.instance().typeSelector.onchange = (e: Event) => { App.instance().notebook.newCell(App.instance().notebook.activeCell, (e.currentTarget as HTMLSelectElement).value); }
+        App.instance().typeSelector.onchange = (e: Event) => { App.instance().notebook.newCell((e.currentTarget as HTMLSelectElement).value,App.instance().notebook.activeCell); }
     }
     onSelectCell(cell: Cell) {
         App.instance().typeSelector.value = cell.type;

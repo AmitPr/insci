@@ -2,14 +2,9 @@
     margin: 0;
 }
 
-.container {
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-right: auto;
-    margin-left: auto;
-
+.container, .actionbar, .document-title{
     @media @xs {
-        width: 100%;
+        max-width: 100%;
     }
 
     @media @sm {
@@ -33,6 +28,13 @@
     }
 }
 
+.container {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 header {
     width: 100%;
     box-sizing: border-box;
@@ -47,11 +49,11 @@ header {
     }
 
     div.document-title {
-        width: 100%;
         display: flex;
         align-items: center;
         padding: 0.25rem;
         box-sizing: border-box;
+        margin: 0 auto;
     }
 
 
@@ -66,13 +68,13 @@ header {
     }
 
     div.actionbar {
-        width: 100%;
         height: 2.5em;
         padding: 0.25em 1em;
         padding-bottom: 0;
         box-sizing: border-box;
         display: flex;
         align-items: center;
+        margin: 0 auto;
     }
 }
 
